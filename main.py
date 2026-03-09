@@ -12,6 +12,11 @@ async def root():
 def home():
     return { 'message' : 'Welcome to out home page. redirect to /docs for interactive workflows'}
 
+
+@app.post('/create')
+def create_user():
+    return { 'message' : 'user created successfully'}
+
 @app.get('/about')
 def about():
     return { 'message' : 'This is a simple FastAPI application to demonstrate how to create a web server using FastAPI. It has two endpoints: /home and /about. The /home endpoint returns a welcome message, while the /about endpoint provides information about the application.' }
