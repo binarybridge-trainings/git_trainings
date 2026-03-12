@@ -6,7 +6,7 @@ const noteColorInput = document.getElementById('noteColor');
 const createNoteBtn = document.getElementById('createNoteBtn');
 const noteTemplate = document.getElementById('noteTemplate');
 
-// Initialize app as Ashok
+// Initialize app as Ashok kumar
 document.addEventListener('DOMContentLoaded', () => {
     loadNotes();
     createNoteBtn.addEventListener('click', handleCreateNote);
