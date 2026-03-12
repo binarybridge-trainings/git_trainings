@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keep Notes - A Simple Note Taking App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1>📝 Keep Notes</h1>
+                <p>A simple note-taking application</p>
+            </div>
+        </header>
+
+        <!-- Create Note Section -->
+        <div class="create-note-section">
+            <div class="create-note-card">
+                <input 
+                    type="text" 
+                    id="noteTitle" 
+                    placeholder="Add a title..." 
+                    class="note-title-input"
+                >
+                <textarea 
+                    id="noteContent" 
+                    placeholder="Add a note..." 
+                    class="note-content-input"
+                ></textarea>
+                <div class="create-actions">
+                    <div class="color-picker">
+                        <label>Color:</label>
+                        <input type="color" id="noteColor" value="#fff9c4" class="color-input">
+                    </div>
+                    <button id="createNoteBtn" class="btn btn-primary">Create Note</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Notes Grid -->
+        <div class="notes-container" id="notesContainer">
+            <p class="no-notes">No notes yet. Create one to get started!</p>
+        </div>
+    </div>
+
+    <!-- Note Template (hidden) -->
+    <template id="noteTemplate">
+        <div class="note-card" data-id="">
+            <div class="note-header">
+                <h3 class="note-title"></h3>
+                <div class="note-actions">
+                    <button class="btn-pin" title="Pin note">📌</button>
+                    <button class="btn-delete" title="Delete note">🗑️</button>
+                </div>
+            </div>
+            <div class="note-color-indicator"></div>
+            <p class="note-content"></p>
+            <div class="note-footer">
+                <small class="note-date"></small>
+            </div>
+        </div>
+    </template>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
