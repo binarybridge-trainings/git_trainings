@@ -6,7 +6,7 @@ const noteColorInput = document.getElementById('noteColor');
 const createNoteBtn = document.getElementById('createNoteBtn');
 const noteTemplate = document.getElementById('noteTemplate');
 
-// Initialize app
+// Initialize app as Ashok
 document.addEventListener('DOMContentLoaded', () => {
     loadNotes();
     createNoteBtn.addEventListener('click', handleCreateNote);
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /**
- * Load all notes from the API
+//  Load all notes from the API
  */
 async function loadNotes() {
     try {
