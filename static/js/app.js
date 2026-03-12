@@ -1,4 +1,4 @@
-// DOM Elements
+// DOM Elements for practise
 const notesContainer = document.getElementById('notesContainer');
 const noteTitleInput = document.getElementById('noteTitle');
 const noteContentInput = document.getElementById('noteContent');
